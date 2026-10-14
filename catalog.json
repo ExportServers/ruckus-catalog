@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-14T05:00:18Z",
+  "updated": "2026-10-14T05:43:04Z",
   "games": [
     {
       "id": "liars-bar",
@@ -36,7 +36,9 @@
       ],
       "summary": "A new Liar's Deck mode: earn perks and items by surviving the revolver.",
       "description": "Adds **Perks** to the Liar's Deck mode picker, next to Basic, Devil and Chaos.\n\nPick a perk when the match starts, then earn a stronger item every time you survive the revolver. Make it to 5 of 6 and you get **Bulletproof**.\n\n**How it works**\n- Host a friends-only or private lobby and pick **Perks** with the mode arrows.\n- At the start, everyone picks 1 of 3 perks like Steady Hand, Tally, Thick Skin or Sharp Ears.\n- Each pull you survive offers a better item: Peek, Stall, Card Swap, Mirror, Hand Swap, Loud Mouth, Reload or Pass the Gun.\n- Press **Q** on your turn to use an item. You can hold two.\n\n**Everyone at the table needs it** in Perks mode. Players without it are told where to get it and removed from the lobby. Basic, Devil and Chaos games stay exactly as normal.",
-      "images": [],
+      "images": [
+        "https://raw.githubusercontent.com/ExportServers/ruckus-catalog/main/media/ruckus-perks/01-cover.png"
+      ],
       "versions": [
         {
           "version": "1.4.1",
