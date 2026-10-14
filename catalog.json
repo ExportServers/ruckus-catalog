@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-14T04:14:20Z",
+  "updated": "2026-10-14T04:14:31Z",
   "games": [
     {
       "id": "liars-bar",
@@ -127,6 +127,16 @@
       "description": "Adds **Solo** to the PLAY screen, right under Host Game and Lobby List.\n\n**How it works**\n- Click **Enter the Bar**, then **Solo**.\n- Pick how many bots you want (1 to 3) and the mode, then press **Play**.\n- A private table is set up and the match starts on its own. After a match you can press Start again.\n\nBots throw cards, bluff now and then, call liar and take their shot at the revolver like anyone else.\n\nWith **Ruckus Perks** installed you can also play the Perks mode against bots. Bots take the first perk they're offered and don't use items.\n\nSolo plays Liar's Deck on Basic rules for now. Solo games never count toward rank.",
       "images": [],
       "versions": [
+        {
+          "version": "1.1.0",
+          "url": "https://github.com/ExportServers/ruckus-catalog/releases/download/ruckus-solo-1.1.0/ruckus-solo-1.1.0.zip",
+          "sha256": "25b797ffc6836d478d7d07591f31e6f523bc34aa3fefdb5d6246c958ef6d28e2",
+          "gameBuilds": [
+            24035789
+          ],
+          "dependencies": [],
+          "changelog": "Bots take their revolver turn when they call wrong. New difficulty setting: Easy, Medium or Hard. Hard bots count cards and remember who lies. Solo now ends when you die."
+        },
         {
           "version": "1.0.1",
           "url": "https://github.com/ExportServers/ruckus-catalog/releases/download/ruckus-solo-1.0.1/ruckus-solo-1.0.1.zip",
