@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-14T05:43:04Z",
+  "updated": "2026-10-14T05:43:07Z",
   "games": [
     {
       "id": "liars-bar",
@@ -123,7 +123,9 @@
       ],
       "summary": "Play Liar's Deck on your own against bots.",
       "description": "Adds **Solo** to the PLAY screen, right under Host Game and Lobby List.\n\n**How it works**\n- Click **Enter the Bar**, then **Solo**.\n- Pick how many bots you want (1 to 3) and the mode, then press **Play**.\n- A private table is set up and the match starts on its own. After a match you can press Start again.\n\nBots throw cards, bluff now and then, call liar and take their shot at the revolver like anyone else.\n\nWith **Ruckus Perks** installed you can also play the Perks mode against bots. Bots take the first perk they're offered and don't use items.\n\nSolo plays Liar's Deck on Basic rules for now. Solo games never count toward rank.",
-      "images": [],
+      "images": [
+        "https://raw.githubusercontent.com/ExportServers/ruckus-catalog/main/media/ruckus-solo/01-cover.png"
+      ],
       "versions": [
         {
           "version": "1.1.1",
