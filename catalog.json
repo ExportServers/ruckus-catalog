@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-14T05:43:07Z",
+  "updated": "2026-10-14T07:26:53Z",
   "games": [
     {
       "id": "liars-bar",
@@ -21,7 +21,117 @@
         24035789
       ],
       "unityCompany": "Curve Animation",
-      "unityProduct": "Liar's Bar"
+      "unityProduct": "Liar's Bar",
+      "requiredFiles": [
+        "Liar's Bar.exe",
+        "GameAssembly.dll"
+      ]
+    }
+  ],
+  "gamesV2": [
+    {
+      "id": "cyberpunk-2077",
+      "name": "Cyberpunk 2077",
+      "steamAppId": 1091500,
+      "exe": "bin/x64/Cyberpunk2077.exe",
+      "art": {
+        "banner": null,
+        "icon": null
+      },
+      "knownBuilds": [
+        20383525
+      ],
+      "requiredFiles": [
+        "bin/x64/Cyberpunk2077.exe",
+        "archive/pc/content"
+      ],
+      "notice": "Ruckus is an unofficial fan project and isn't approved or endorsed by CD PROJEKT RED.",
+      "modding": {
+        "kind": "files",
+        "roots": [
+          "archive/pc/mod",
+          "bin/x64",
+          "red4ext",
+          "r6/scripts",
+          "r6/tweaks",
+          "r6/config",
+          "r6/input",
+          "engine/config",
+          "engine/tools"
+        ],
+        "frameworks": [
+          "red4ext",
+          "cyber-engine-tweaks",
+          "redscript",
+          "archivexl",
+          "tweakxl",
+          "codeware"
+        ],
+        "clearOnUpdate": [
+          "r6/cache/modded"
+        ],
+        "modFolders": [
+          "archive/pc/mod",
+          "r6/scripts",
+          "r6/tweaks",
+          "r6/input",
+          "red4ext",
+          "bin/x64/plugins",
+          "mods"
+        ],
+        "keep": [
+          "red4ext/logs",
+          "red4ext/config.ini",
+          "red4ext/redscript_paths.txt",
+          "red4ext/plugins/*/*.log",
+          "r6/logs",
+          "bin/x64/plugins/cyber_engine_tweaks/*.log",
+          "bin/x64/plugins/cyber_engine_tweaks/*.json",
+          "bin/x64/plugins/cyber_engine_tweaks/*.ini",
+          "bin/x64/plugins/cyber_engine_tweaks/mods/*/db.sqlite3"
+        ]
+      },
+      "logs": [
+        {
+          "name": "Cyber Engine Tweaks",
+          "path": "bin/x64/plugins/cyber_engine_tweaks/cyber_engine_tweaks.log",
+          "format": "plain"
+        },
+        {
+          "name": "Scripts (CET)",
+          "path": "bin/x64/plugins/cyber_engine_tweaks/scripting.log",
+          "format": "plain"
+        },
+        {
+          "name": "RED4ext",
+          "path": "red4ext/logs/red4ext-*.log",
+          "format": "plain"
+        },
+        {
+          "name": "redscript",
+          "path": "r6/logs/redscript_rCURRENT.log",
+          "format": "plain"
+        },
+        {
+          "name": "ArchiveXL",
+          "path": "red4ext/plugins/ArchiveXL/ArchiveXL-*.log",
+          "format": "plain"
+        },
+        {
+          "name": "TweakXL",
+          "path": "red4ext/plugins/TweakXL/TweakXL-*.log",
+          "format": "plain"
+        },
+        {
+          "name": "Codeware",
+          "path": "red4ext/plugins/Codeware/Codeware-*.log",
+          "format": "plain"
+        }
+      ],
+      "crash": {
+        "quickExitSeconds": 30,
+        "markers": []
+      }
     }
   ],
   "mods": [
@@ -166,6 +276,156 @@
           ],
           "dependencies": [],
           "changelog": "First release: play Liar's Deck on your own against 1 to 3 bots."
+        }
+      ]
+    },
+    {
+      "id": "red4ext",
+      "game": "cyberpunk-2077",
+      "name": "RED4ext",
+      "author": "WopsS",
+      "tags": [],
+      "summary": "Loads native plugins into Cyberpunk 2077. Most other frameworks need it.",
+      "description": "Loads native plugins into Cyberpunk 2077. Most other frameworks need it.\n\nRED4ext is made by WopsS. Ruckus installs the official release from https://github.com/wopss/RED4ext without changes, under its MIT license. All credit goes to its authors.\n\nRuckus sets it up for you with **Set up mods** and keeps it at a version that works with your game.",
+      "images": [],
+      "role": "framework",
+      "versions": [
+        {
+          "version": "1.30.0",
+          "url": "https://github.com/wopss/RED4ext/releases/download/v1.30.0/red4ext-1.30.0.zip",
+          "sha256": "3a72225c9d2c46c99f4a4159d952b9d24366357c2423eb7ea255c84e9e11c0b0",
+          "gameBuilds": [
+            20383525
+          ],
+          "dependencies": [],
+          "changelog": "Pinned for Cyberpunk 2077 patch 2.31."
+        }
+      ]
+    },
+    {
+      "id": "cyber-engine-tweaks",
+      "game": "cyberpunk-2077",
+      "name": "Cyber Engine Tweaks",
+      "author": "yamashi and contributors",
+      "tags": [],
+      "summary": "Runs Lua mods and adds the in game overlay many mods use for their settings.",
+      "description": "Runs Lua mods and adds the in game overlay many mods use for their settings.\n\nCyber Engine Tweaks is made by yamashi and contributors. Ruckus installs the official release from https://github.com/maximegmd/CyberEngineTweaks without changes, under its MIT license. All credit goes to its authors.\n\nRuckus sets it up for you with **Set up mods** and keeps it at a version that works with your game.",
+      "images": [],
+      "role": "framework",
+      "versions": [
+        {
+          "version": "1.37.1",
+          "url": "https://github.com/maximegmd/CyberEngineTweaks/releases/download/v1.37.1/cet_1.37.1.zip",
+          "sha256": "1855017796a27f518199f5b7d7210ef1db7a5c5f0af468c68e04e6e666ad248c",
+          "gameBuilds": [
+            20383525
+          ],
+          "dependencies": [
+            "red4ext"
+          ],
+          "changelog": "Pinned for Cyberpunk 2077 patch 2.31."
+        }
+      ]
+    },
+    {
+      "id": "redscript",
+      "game": "cyberpunk-2077",
+      "name": "redscript",
+      "author": "jac3km4",
+      "tags": [],
+      "summary": "Compiles script mods (.reds files) into the game when it starts.",
+      "description": "Compiles script mods (.reds files) into the game when it starts.\n\nredscript is made by jac3km4. Ruckus installs the official release from https://github.com/jac3km4/redscript without changes, under its MIT license. All credit goes to its authors.\n\nRuckus sets it up for you with **Set up mods** and keeps it at a version that works with your game.",
+      "images": [],
+      "role": "framework",
+      "versions": [
+        {
+          "version": "0.5.31",
+          "url": "https://github.com/jac3km4/redscript/releases/download/v0.5.31/redscript-v0.5.31-windows.zip",
+          "sha256": "799bbd88863f6728616f8d723c941ea15dff71ed5bbfd50c525f0d39ea0bf46b",
+          "gameBuilds": [
+            20383525
+          ],
+          "dependencies": [],
+          "changelog": "Pinned for Cyberpunk 2077 patch 2.31."
+        }
+      ]
+    },
+    {
+      "id": "archivexl",
+      "game": "cyberpunk-2077",
+      "name": "ArchiveXL",
+      "author": "psiberx",
+      "tags": [],
+      "summary": "Lets mods add new items, appearances and other game resources.",
+      "description": "Lets mods add new items, appearances and other game resources.\n\nArchiveXL is made by psiberx. Ruckus installs the official release from https://github.com/psiberx/cp2077-archive-xl without changes, under its MIT license. All credit goes to its authors.\n\nRuckus sets it up for you with **Set up mods** and keeps it at a version that works with your game.",
+      "images": [],
+      "role": "framework",
+      "versions": [
+        {
+          "version": "1.27.4",
+          "url": "https://github.com/psiberx/cp2077-archive-xl/releases/download/v1.27.4/ArchiveXL-1.27.4.zip",
+          "sha256": "6c638dc1108a565ff4806835a17f704cbb2ab2afeb8ccf700080797c3f70591c",
+          "gameBuilds": [
+            20383525
+          ],
+          "dependencies": [
+            "red4ext",
+            "redscript"
+          ],
+          "changelog": "Pinned for Cyberpunk 2077 patch 2.31."
+        }
+      ]
+    },
+    {
+      "id": "tweakxl",
+      "game": "cyberpunk-2077",
+      "name": "TweakXL",
+      "author": "psiberx",
+      "tags": [],
+      "summary": "Lets mods change game data such as item stats and prices.",
+      "description": "Lets mods change game data such as item stats and prices.\n\nTweakXL is made by psiberx. Ruckus installs the official release from https://github.com/psiberx/cp2077-tweak-xl without changes, under its MIT license. All credit goes to its authors.\n\nRuckus sets it up for you with **Set up mods** and keeps it at a version that works with your game.",
+      "images": [],
+      "role": "framework",
+      "versions": [
+        {
+          "version": "1.11.5",
+          "url": "https://github.com/psiberx/cp2077-tweak-xl/releases/download/v1.11.5/TweakXL-1.11.5.zip",
+          "sha256": "99ed60fd533a963e12955e38fabe55d21a046c15102ee4a2d9b82c551bc8f894",
+          "gameBuilds": [
+            20383525
+          ],
+          "dependencies": [
+            "red4ext",
+            "redscript"
+          ],
+          "changelog": "Pinned for Cyberpunk 2077 patch 2.31."
+        }
+      ]
+    },
+    {
+      "id": "codeware",
+      "game": "cyberpunk-2077",
+      "name": "Codeware",
+      "author": "psiberx",
+      "tags": [],
+      "summary": "A library that script mods build on for new game features.",
+      "description": "A library that script mods build on for new game features.\n\nCodeware is made by psiberx. Ruckus installs the official release from https://github.com/psiberx/cp2077-codeware without changes, under its MIT license. All credit goes to its authors.\n\nRuckus sets it up for you with **Set up mods** and keeps it at a version that works with your game.",
+      "images": [],
+      "role": "framework",
+      "versions": [
+        {
+          "version": "1.20.5",
+          "url": "https://github.com/psiberx/cp2077-codeware/releases/download/v1.20.5/Codeware-1.20.5.zip",
+          "sha256": "102989e199bad650fe6e53395c22bac53fdd7abecc6eeec3b0046886631591f0",
+          "gameBuilds": [
+            20383525
+          ],
+          "dependencies": [
+            "red4ext",
+            "redscript",
+            "cyber-engine-tweaks"
+          ],
+          "changelog": "Pinned for Cyberpunk 2077 patch 2.31."
         }
       ]
     }
