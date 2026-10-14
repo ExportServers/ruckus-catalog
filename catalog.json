@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-14T01:49:31Z",
+  "updated": "2026-10-14T02:12:23Z",
   "games": [
     {
       "id": "liars-bar",
@@ -58,10 +58,20 @@
         "gameplay",
         "everyone"
       ],
-      "summary": "Earn perks and items by surviving the revolver in Liar's Deck.",
-      "description": "Pick a perk when the match starts, then earn a stronger item every time you survive the revolver. Make it to 5 of 6 and you get **Bulletproof**.\n\n**How it works**\n- At the start, pick 1 of 3 perks like Steady Hand, Tally, Thick Skin or Sharp Ears.\n- Each pull you survive offers a better item: Peek, Stall, Card Swap, Mirror, Hand Swap, Loud Mouth, Reload or Pass the Gun.\n- Press **Q** on your turn to use an item. You can hold two.\n\n**Everyone at the table needs it.** Players without it are told where to get it and removed from the lobby.\n\nWorks in Liar's Deck (Basic and Devil) in your own friends-only or private lobbies. It switches itself off in public lobbies, ranked and other modes.",
+      "summary": "A new Liar's Deck mode: earn perks and items by surviving the revolver.",
+      "description": "Adds **Perks** to the Liar's Deck mode picker, next to Basic, Devil and Chaos.\n\nPick a perk when the match starts, then earn a stronger item every time you survive the revolver. Make it to 5 of 6 and you get **Bulletproof**.\n\n**How it works**\n- Host a friends-only or private lobby and pick **Perks** with the mode arrows.\n- At the start, everyone picks 1 of 3 perks like Steady Hand, Tally, Thick Skin or Sharp Ears.\n- Each pull you survive offers a better item: Peek, Stall, Card Swap, Mirror, Hand Swap, Loud Mouth, Reload or Pass the Gun.\n- Press **Q** on your turn to use an item. You can hold two.\n\n**Everyone at the table needs it** in Perks mode. Players without it are told where to get it and removed from the lobby. Basic, Devil and Chaos games stay exactly as normal.",
       "images": [],
       "versions": [
+        {
+          "version": "1.1.0",
+          "url": "https://github.com/ExportServers/ruckus-catalog/releases/download/ruckus-perks-1.1.0/ruckus-perks-1.1.0.zip",
+          "sha256": "d40d492168b20e4ebbacb2ff6e0b337d13b4367fb3e3c4338e6a637e3d49b266",
+          "gameBuilds": [
+            24035789
+          ],
+          "dependencies": [],
+          "changelog": "Perks is now its own Liar's Deck mode: pick it in the lobby next to Basic, Devil and Chaos. Plus fixes from review."
+        },
         {
           "version": "1.0.0",
           "url": "https://github.com/ExportServers/ruckus-catalog/releases/download/ruckus-perks-1.0.0/ruckus-perks-1.0.0.zip",
