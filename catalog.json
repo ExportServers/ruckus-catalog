@@ -34,17 +34,14 @@
       "name": "Cyberpunk 2077",
       "steamAppId": 1091500,
       "exe": "bin/x64/Cyberpunk2077.exe",
-      "art": {
-        "banner": null,
-        "icon": null
-      },
-      "knownBuilds": [
-        20383525
-      ],
       "requiredFiles": [
         "bin/x64/Cyberpunk2077.exe",
         "archive/pc/content"
       ],
+      "knownBuilds": [
+        20383525
+      ],
+      "art": {},
       "notice": "Ruckus is an unofficial fan project and isn't approved or endorsed by CD PROJEKT RED.",
       "modding": {
         "kind": "files",
@@ -75,9 +72,20 @@
           "r6/scripts",
           "r6/tweaks",
           "r6/input",
+          "r6/config/cybercmd",
+          "r6/config/redsUserHints",
           "red4ext",
           "bin/x64/plugins",
           "mods"
+        ],
+        "loaderFiles": [
+          "bin/x64/version.dll",
+          "bin/x64/winmm.dll",
+          "bin/x64/global.ini",
+          "bin/x64/LICENSE",
+          "engine/config/base/scripts.ini",
+          "engine/tools/scc.exe",
+          "engine/tools/scc_lib.dll"
         ],
         "keep": [
           "red4ext/logs",
@@ -129,8 +137,7 @@
         }
       ],
       "crash": {
-        "quickExitSeconds": 30,
-        "markers": []
+        "quickExitSeconds": 30
       }
     }
   ],
