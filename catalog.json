@@ -96,7 +96,10 @@
           "bin/x64/plugins/cyber_engine_tweaks/*.log",
           "bin/x64/plugins/cyber_engine_tweaks/*.json",
           "bin/x64/plugins/cyber_engine_tweaks/*.ini",
-          "bin/x64/plugins/cyber_engine_tweaks/mods/*/db.sqlite3"
+          "bin/x64/plugins/cyber_engine_tweaks/mods/*/db.sqlite3",
+          "bin/x64/plugins/address_library/*.bin",
+          "bin/x64/plugins/cyber_engine_tweaks/mods/RuckusGhostRuns/runs/*.json",
+          "red4ext/plugins/Codeware/Persistent"
         ]
       },
       "logs": [
