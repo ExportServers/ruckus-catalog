@@ -1,20 +1,25 @@
 {
   "schema": 1,
-  "updated": "2026-10-13T12:00:00Z",
+  "updated": "2026-10-14T01:49:31Z",
   "games": [
     {
       "id": "liars-bar",
       "name": "Liar's Bar",
       "steamAppId": 3097560,
       "exe": "Liar's Bar.exe",
-      "art": {},
+      "art": {
+        "banner": null,
+        "icon": null
+      },
       "loader": {
         "type": "bepinex6-il2cpp",
         "build": 697,
         "url": "https://builds.bepinex.dev/projects/bepinex_be/697/BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.697%2B5362580.zip",
         "sha256": "616ec7eb06cf11b2a0000e8fcef04d1b12bb58e84a2e0bdac9523234fc193ceb"
       },
-      "knownBuilds": [24035789],
+      "knownBuilds": [
+        24035789
+      ],
       "unityCompany": "Curve Animation",
       "unityProduct": "Liar's Bar"
     }
@@ -25,16 +30,47 @@
       "game": "liars-bar",
       "name": "Hello Ruckus",
       "author": "Ruckus",
-      "tags": ["client"],
+      "tags": [
+        "client"
+      ],
       "summary": "Shows a small Ruckus badge in-game. Proves mods load.",
       "description": "A tiny client-side mod that draws \"Ruckus ✓ Hello Ruckus 1.0.0\" in the top-left corner. Only you see it.",
+      "images": [],
       "versions": [
         {
           "version": "1.0.0",
           "url": "https://github.com/ExportServers/ruckus-catalog/releases/download/hello-ruckus-1.0.0/hello-ruckus-1.0.0.zip",
           "sha256": "3ad342f1cb41b67b8fd27eba6a8703ba03e8f0dd402b077de7566b19ea222e2e",
-          "gameBuilds": [24035789],
+          "gameBuilds": [
+            24035789
+          ],
+          "dependencies": [],
           "changelog": "First release."
+        }
+      ]
+    },
+    {
+      "id": "ruckus-perks",
+      "game": "liars-bar",
+      "name": "Ruckus Perks (Beta)",
+      "author": "Ruckus",
+      "tags": [
+        "gameplay",
+        "everyone"
+      ],
+      "summary": "Earn perks and items by surviving the revolver in Liar's Deck.",
+      "description": "Pick a perk when the match starts, then earn a stronger item every time you survive the revolver. Make it to 5 of 6 and you get **Bulletproof**.\n\n**How it works**\n- At the start, pick 1 of 3 perks like Steady Hand, Tally, Thick Skin or Sharp Ears.\n- Each pull you survive offers a better item: Peek, Stall, Card Swap, Mirror, Hand Swap, Loud Mouth, Reload or Pass the Gun.\n- Press **Q** on your turn to use an item. You can hold two.\n\n**Everyone at the table needs it.** Players without it are told where to get it and removed from the lobby.\n\nWorks in Liar's Deck (Basic and Devil) in your own friends-only or private lobbies. It switches itself off in public lobbies, ranked and other modes.",
+      "images": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "https://github.com/ExportServers/ruckus-catalog/releases/download/ruckus-perks-1.0.0/ruckus-perks-1.0.0.zip",
+          "sha256": "8ba7fb3d8361eebd7a4b052122304f63fb7f1ee1cb4e50be203976d060b1df19",
+          "gameBuilds": [
+            24035789
+          ],
+          "dependencies": [],
+          "changelog": "First beta: 4 starting perks, 8 items earned by surviving the revolver, and Bulletproof at 5 of 6."
         }
       ]
     }
