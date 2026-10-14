@@ -26,30 +26,6 @@
   ],
   "mods": [
     {
-      "id": "hello-ruckus",
-      "game": "liars-bar",
-      "name": "Hello Ruckus",
-      "author": "Ruckus",
-      "tags": [
-        "client"
-      ],
-      "summary": "Shows a small Ruckus badge in-game. Proves mods load.",
-      "description": "A tiny client-side mod that draws \"Ruckus ✓ Hello Ruckus 1.0.0\" in the top-left corner. Only you see it.",
-      "images": [],
-      "versions": [
-        {
-          "version": "1.0.0",
-          "url": "https://github.com/ExportServers/ruckus-catalog/releases/download/hello-ruckus-1.0.0/hello-ruckus-1.0.0.zip",
-          "sha256": "3ad342f1cb41b67b8fd27eba6a8703ba03e8f0dd402b077de7566b19ea222e2e",
-          "gameBuilds": [
-            24035789
-          ],
-          "dependencies": [],
-          "changelog": "First release."
-        }
-      ]
-    },
-    {
       "id": "ruckus-perks",
       "game": "liars-bar",
       "name": "Ruckus Perks (Beta)",
