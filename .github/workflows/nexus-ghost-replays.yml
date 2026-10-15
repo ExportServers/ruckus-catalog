@@ -1,0 +1,62 @@
+# Every Ghost Replays release in this repo (made by publish-mod.ps1) also goes to its Nexus Mods page as a
+# new version of the same file, with the release notes as the changelog.
+#
+# One-time setup, after the Nexus page exists with its first file uploaded by hand:
+#   gh secret set NEXUSMODS_API_KEY --repo ExportServers/ruckus-catalog      (key from nexusmods.com/settings/api-keys)
+#   gh variable set NEXUS_GHOST_MOD_ID --body <mod id> --repo ExportServers/ruckus-catalog
+#   gh variable set NEXUS_GHOST_FILE_ID --body <file id> --repo ExportServers/ruckus-catalog
+# Until those are set the job is skipped. To resend a release: Actions > this workflow > Run workflow.
+name: Ghost Replays to Nexus Mods
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to send, e.g. ruckus-ghost-runs-1.0.6
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    if: >-
+      vars.NEXUS_GHOST_FILE_ID != '' &&
+      startsWith(github.event.release.tag_name || inputs.tag, 'ruckus-ghost-runs-')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the release zip
+        id: zip
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          version="${TAG#ruckus-ghost-runs-}"
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern "ruckus-ghost-runs-$version.zip"
+          mv "ruckus-ghost-runs-$version.zip" "Ghost-Replays-$version.zip"
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json body --jq .body > changelog.txt
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          {
+            echo "changelog<<CHANGELOG_END"
+            cat changelog.txt
+            echo
+            echo "CHANGELOG_END"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Upload to Nexus Mods
+        uses: Nexus-Mods/upload-action@c96019556046053aa26044b44396cd38929daf23 # v1.0.0-beta.10
+        with:
+          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
+          mod_id: ${{ vars.NEXUS_GHOST_MOD_ID }}
+          file_id: ${{ vars.NEXUS_GHOST_FILE_ID }}
+          filename: Ghost-Replays-${{ steps.zip.outputs.version }}.zip
+          version: ${{ steps.zip.outputs.version }}
+          display_name: Ghost Replays
+          description: Ghost Replays ${{ steps.zip.outputs.version }}. Needs RED4ext, Cyber Engine Tweaks, redscript and Codeware.
+          changelog: ${{ steps.zip.outputs.changelog }}
+          archive_existing_version: true
+          update_mod_version: true
+          primary_mod_manager_download: true
+          show_requirements_pop_up: true
