@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-15T07:36:17Z",
+  "updated": "2026-10-15T08:05:48Z",
   "games": [
     {
       "id": "liars-bar",
@@ -456,6 +456,16 @@
       "description": "Turns any drive into a race against a hologram ghost.\n\n**Record a run**\n- Sit in any car and hold **L**. The game's own race countdown starts.\n- Drive wherever you like, then hold **L** again to finish. Your run is saved and a racing flag appears on the map where it started.\n\n**Race a ghost**\n- Drive up to a racing flag, stop, and hold **L**. You're put in the run's own car on the exact start line, so every attempt is fair.\n- Race the hologram through the checkpoints with the live gap under the timer. Beat it and your time becomes the ghost to beat.\n\n**Share and compete in Ruckus**\n- Open Cyberpunk 2077 in Ruckus and go to **Races**. Share a run with a code, or **Publish** it for everyone.\n- Community races have leaderboards. Your best times upload by themselves while Ruckus is open and you're signed in.\n- Upvote the races you like. The 5 most upvoted races appear in everyone's game.\n\nThe game doesn't save while you're in a ghost race or its race car. Get out of the race car to save.",
       "images": [],
       "versions": [
+        {
+          "version": "1.0.5",
+          "url": "https://github.com/ExportServers/ruckus-catalog/releases/download/ruckus-ghost-runs-1.0.5/ruckus-ghost-runs-1.0.5.zip",
+          "sha256": "8f941325b0fe2cba41030eeffbf7e17e855cf5a56a18c6aac17bfd3a0c526e97",
+          "gameBuilds": [
+            20383525
+          ],
+          "dependencies": [],
+          "changelog": "The game's own race arrows now light up the road ahead along the race line, and the finish is the game's own finish line marker."
+        },
         {
           "version": "1.0.4",
           "url": "https://github.com/ExportServers/ruckus-catalog/releases/download/ruckus-ghost-runs-1.0.4/ruckus-ghost-runs-1.0.4.zip",
