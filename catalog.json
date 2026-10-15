@@ -446,13 +446,13 @@
     {
       "id": "ruckus-ghost-runs",
       "game": "cyberpunk-2077",
-      "name": "Ruckus Ghost Runs",
+      "name": "Ruckus Ghost Replays",
       "author": "Ruckus",
       "tags": [
         "gameplay",
         "driving"
       ],
-      "summary": "Race a hologram ghost of your best drive, anywhere in Night City.",
+      "summary": "Race a hologram replay of your best drive, anywhere in Night City.",
       "description": "Turns any drive into a race against a hologram ghost.\n\n**Record a run**\n- Sit in any car and hold **L**. The game's own race countdown starts.\n- Drive wherever you like, then hold **L** again to finish. Your run is saved and a racing flag appears on the map where it started.\n\n**Race a ghost**\n- Drive up to a racing flag, stop, and hold **L**. You're put in the run's own car on the exact start line, so every attempt is fair.\n- Race the hologram through the checkpoints with the live gap under the timer. Beat it and your time becomes the ghost to beat.\n\n**Share and compete in Ruckus**\n- Open Cyberpunk 2077 in Ruckus and go to **Races**. Share a run with a code, or **Publish** it for everyone.\n- Community races have leaderboards. Your best times upload by themselves while Ruckus is open and you're signed in.\n- Upvote the races you like. The 5 most upvoted races appear in everyone's game.\n\nThe game doesn't save while you're in a ghost race or its race car. Get out of the race car to save.",
       "images": [],
       "versions": [
