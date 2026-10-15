@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-14T07:26:53Z",
+  "updated": "2026-10-15T00:30:41Z",
   "games": [
     {
       "id": "liars-bar",
@@ -34,14 +34,17 @@
       "name": "Cyberpunk 2077",
       "steamAppId": 1091500,
       "exe": "bin/x64/Cyberpunk2077.exe",
+      "art": {
+        "banner": null,
+        "icon": null
+      },
+      "knownBuilds": [
+        20383525
+      ],
       "requiredFiles": [
         "bin/x64/Cyberpunk2077.exe",
         "archive/pc/content"
       ],
-      "knownBuilds": [
-        20383525
-      ],
-      "art": {},
       "notice": "Ruckus is an unofficial fan project and isn't approved or endorsed by CD PROJEKT RED.",
       "modding": {
         "kind": "files",
@@ -140,7 +143,8 @@
         }
       ],
       "crash": {
-        "quickExitSeconds": 30
+        "quickExitSeconds": 30,
+        "markers": []
       }
     }
   ],
@@ -436,6 +440,31 @@
             "cyber-engine-tweaks"
           ],
           "changelog": "Pinned for Cyberpunk 2077 patch 2.31."
+        }
+      ]
+    },
+    {
+      "id": "ruckus-ghost-runs",
+      "game": "cyberpunk-2077",
+      "name": "Ruckus Ghost Runs",
+      "author": "Ruckus",
+      "tags": [
+        "gameplay",
+        "driving"
+      ],
+      "summary": "Race a hologram ghost of your best drive, anywhere in Night City.",
+      "description": "Turns any drive into a race against a hologram ghost.\n\n**Record a run**\n- Sit in any car and hold **L**. The game's own race countdown starts.\n- Drive wherever you like, then hold **L** again to finish. Your run is saved and a racing flag appears on the map where it started.\n\n**Race a ghost**\n- Drive up to a racing flag, stop, and hold **L**. You're put in the run's own car on the exact start line, so every attempt is fair.\n- Race the hologram through the checkpoints with the live gap under the timer. Beat it and your time becomes the ghost to beat.\n\n**Share and compete in Ruckus**\n- Open Cyberpunk 2077 in Ruckus and go to **Races**. Share a run with a code, or **Publish** it for everyone.\n- Community races have leaderboards. Your best times upload by themselves while Ruckus is open and you're signed in.\n- Upvote the races you like. The 5 most upvoted races appear in everyone's game.\n\nThe game doesn't save while you're in a ghost race or its race car. Get out of the race car to save.",
+      "images": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "url": "https://github.com/ExportServers/ruckus-catalog/releases/download/ruckus-ghost-runs-1.0.0/ruckus-ghost-runs-1.0.0.zip",
+          "sha256": "d120d33852bc89bbe599f7056749bc8deb2fcbd9f6f45bd419a890375e9c61a5",
+          "gameBuilds": [
+            20383525
+          ],
+          "dependencies": [],
+          "changelog": "First release: record runs, race hologram ghosts, share codes, community races and leaderboards."
         }
       ]
     }
