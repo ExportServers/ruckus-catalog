@@ -1,5 +1,5 @@
 # Every Ghost Replays release in this repo (made by publish-mod.ps1) also goes to its Nexus Mods page as a
-# new version of the same file, with the release notes as the changelog.
+# new version of the same file. The release notes go in the version's description and the mod's changelog.
 #
 # One-time setup, after the Nexus page exists with its first file uploaded by hand:
 #   gh secret set NEXUSMODS_API_KEY --repo ExportServers/ruckus-catalog      (key from nexusmods.com/settings/api-keys)
@@ -38,6 +38,10 @@ jobs:
           mv "ruckus-ghost-runs-$version.zip" "Ghost-Replays-$version.zip"
           gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json body --jq .body > changelog.txt
           echo "version=$version" >> "$GITHUB_OUTPUT"
+          # The text under the version in the Files tab is the changelog too (Nexus keeps it short).
+          notes=$(tr '\r\n' '  ' < changelog.txt | tr -s ' ' | sed 's/ *$//')
+          if [ ${#notes} -gt 250 ]; then notes="${notes:0:250}"; notes="${notes% *}..."; fi
+          echo "notes=$notes" >> "$GITHUB_OUTPUT"
           {
             echo "changelog<<CHANGELOG_END"
             cat changelog.txt
@@ -54,7 +58,7 @@ jobs:
           filename: Ghost-Replays-${{ steps.zip.outputs.version }}.zip
           version: ${{ steps.zip.outputs.version }}
           display_name: Ghost Replays
-          description: Ghost Replays ${{ steps.zip.outputs.version }}. Needs RED4ext, Cyber Engine Tweaks, redscript and Codeware.
+          description: ${{ steps.zip.outputs.notes }}
           changelog: ${{ steps.zip.outputs.changelog }}
           archive_existing_version: true
           update_mod_version: true
