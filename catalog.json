@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-10-18T23:12:49Z",
+  "updated": "2026-10-18T23:13:11Z",
   "games": [
     {
       "id": "liars-bar",
@@ -555,6 +555,35 @@
           ],
           "dependencies": [],
           "changelog": "First release: record runs, race hologram ghosts, share codes, community races and leaderboards."
+        }
+      ]
+    }
+  ],
+  "alphaMods": [
+    {
+      "id": "ruckus-night-city-together",
+      "game": "cyberpunk-2077",
+      "name": "Night City Together",
+      "author": "Ruckus",
+      "tags": [
+        "gameplay",
+        "multiplayer"
+      ],
+      "summary": "See your friends in your own Night City as holograms. Drive, race and do missions side by side.",
+      "description": "Play your own game and see your friends in it as holograms, wherever they are in Night City.\n\n**Play together**\n- Start a session in Ruckus and invite your friends. Up to 8 players can join one session.\n- Everyone plays their own save. Friends show up as holograms with a pin on the map.\n- Hold **O** in the game to open the panel and to join an invite.\n\n**Race**\n- Live races need Ghost Replays. Without it, everything else still works.\n\nThis is an early test for approved players.",
+      "images": [],
+      "versions": [
+        {
+          "version": "0.1.0",
+          "url": "https://github.com/ExportServers/ruckus-catalog/releases/download/ruckus-night-city-together-0.1.0/ruckus-night-city-together-0.1.0.zip",
+          "sha256": "c1d9f59ec93519af3e502f3aa25e86e9f5f8a5299f17f81053b7e60f34088b0a",
+          "gameBuilds": [
+            20383525
+          ],
+          "dependencies": [
+            "ruckus-ghost-runs"
+          ],
+          "changelog": "First alpha. See your friends in your game, invite them from Ruckus, race live."
         }
       ]
     }
